@@ -65,6 +65,7 @@ class _RepoListState extends State<RepoList> {
             itemBuilder: (context, index) {
               final repo = provider.repos[index];
               return Card(
+                color: Colors.white,
                 margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 elevation: 3,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
