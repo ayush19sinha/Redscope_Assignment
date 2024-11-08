@@ -25,7 +25,11 @@ class _GalleryGridState extends State<GalleryGrid> {
     return Consumer<AppProvider>(
       builder: (context, provider, child) {
         if (provider.images.isEmpty) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            ),
+          );
         }
 
         return RefreshIndicator(
@@ -61,7 +65,11 @@ class _GalleryGridState extends State<GalleryGrid> {
                     fit: BoxFit.cover,
                     placeholder: (context, url) => Container(
                       color: Colors.grey[300],
-                      child: const Center(child: CircularProgressIndicator()),
+                      child: const Center(
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                        ),
+                      ),
                     ),
                     errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),

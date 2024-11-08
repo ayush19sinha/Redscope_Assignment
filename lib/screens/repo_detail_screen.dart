@@ -43,7 +43,8 @@ class RepoDetailScreen extends StatelessWidget {
             const SizedBox(height: 16),
             ...files.entries.map((entry) {
               return Card(
-                margin: EdgeInsets.only(bottom: 12),
+                color: Colors.white,
+                margin: const EdgeInsets.only(bottom: 12),
                 elevation: 2,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),

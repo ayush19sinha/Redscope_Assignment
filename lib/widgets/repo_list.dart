@@ -54,7 +54,11 @@ class _RepoListState extends State<RepoList> {
     return Consumer<AppProvider>(
       builder: (context, provider, child) {
         if (provider.repos.isEmpty) {
-          return const Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.blue)));
+          return const Center(
+            child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            ),
+          );
         }
 
         return RefreshIndicator(
